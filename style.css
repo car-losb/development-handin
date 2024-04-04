@@ -31,7 +31,9 @@ h1, h2 {
     color: rgb(129, 171, 81);   
     margin: 20px;
     font-weight: bold;
-    text-decoration:underline;
+    margin-left: 80px;
+    margin-right: 80px;
+
 }
 
 h2 {
@@ -57,6 +59,8 @@ h2 {
     font-family: 'Kaisei Decol'; 
     font-size: 15px;
     color: black;   
+    margin-left: 80px; 
+    margin-right: 80px;
 }
 
 ul {
@@ -67,10 +71,16 @@ ul {
     color: rgba(191, 125, 18, 0.84);   
 }
 
+.table_section {
+    display:flex;
+    flex-direction:column; 
+    align-items: center;
+}
+
 table {
     border-collapse: collapse;
     background-color:rgba(239, 155, 18, 0.84);
-    width: 100%;
+    width: 80%;
 }
 
 th, td {
