@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB Testing Handin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaisei+Decol" rel='stylesheet'>
+</head>
+<body>
+    <header class="header" aria-label="Header">
+        <h1>Carlos Betancur Development Handin</h1>
+    </header>
+
+    <div class="overview">
+        <h1>Overview: E-Commerce React Development</h1>
+        <p> This development project sought out to utilize my React skills to create a simple User Interface that emulates
+            many online popular retail sites today. I started by conducting research across various existing retail UIs 
+            and drawing inspiration from my findings to create an optimized design for a second-hand clothes retail platform. This prototype contains a list with
+            filtering and sorting features along with a shopping cart aggregator. 
+        </p>
+
+        <p> I was inspired by recent movements for sustainable online retail, such as <a href="https://www.trashie.io/new-home">Trashie</a>, and 
+            chose to focus my research on online clothing retail platforms.</p>
+    </div>
+
+    <div class="part-1">
+        <h1>Competitive Analysis</h1>
+        <p> To get a basis of how other organizations are designing their interfaces, I performed a competitive analysis comparing
+            differing list and aggregator features from some of the top fast-fashion retailers. The following sites were selected for the study:
+        </p>
+
+        <ul>
+            <li><strong><a href="https://us.shein.com/?url_from=usgooglebrandshein_sheinshein_srsa_20210930&cid=370313608&setid=25652838688&adid=549022341969&pf=GOOGLE&gad_source=1&gclid=CjwKCAjw_LOwBhBFEiwAmSEQARegFpqaRknuQC8uptcpHKhGd2X-8MbiSGO8AUlzTrr6KYr47gcyERoCo0wQAvD_BwE">
+            Shein</a></strong> - Shein is a Chinese-Singaporean fast fashion retailer. Founded in Nanjing, China, Shein grew to become the world's largest fashion retailer as of 2022.</li>
+            <li><strong><a href="https://www.temu.com/">Temu</a></strong> - Temu is a Chinese-based online marketplace that offers heavily discounted consumer goods which are mostly shipped to consumers directly from China.</li>
+            <li><strong><a href="https://www.wish.com/feed/reach-cids-000000000000000000000000-from_ad-19808826207?filter=reach-cids-000000000000000000000000-from_ad-19808826207&utm_source=ggl&utm_medium=pmax&utm_campaign=19808826207&from_ad=19808826207&gad_source=1&gclid=CjwKCAjw_LOwBhBFEiwAmSEQAYW56onIhzfJ1L_1AZWpdqLHLJMyF5WMuAyoWKWXD7F3i4KDzTR2WhoC7vUQAvD_BwE&hide_login_modal=true">
+            Wish</a></strong> - Wish is an American online e-commerce platform for transactions between sellers and buyers.</li>
+        </ul>
+
+        <p> I observed the different features offered by each site and created a competitive comparison chart to visualize the differences
+            between each retailer. The chart can be found below.
+        </p>
+
+        <h2>Competitive Comparison Chart:</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Shein</th>
+                    <th>Temu</th>
+                    <th>Wish</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Categorical Sorting (Article of Clothing)</strong></td>
+                    <td>X</td>
+                    <td></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><strong>Cart Pop-Up</strong></td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Cart Quick-Add</strong></td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Price Filtering</strong></td>
+                    <td>X</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>1-Click-Buy </strong></td>
+                    <td>X</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h2>Comparison Summary</h2>
+
+        <p> 
+            The three websites selected all served similar purposes for users; providing an e-commerce platform for fast fashion purchases. 
+            Nonetheless, they all offered different favoriting, sorting, and aggregator features. 
+        </p>
+            
+        <p>
+            All of the sites had some kind of filtering 
+            option; however, Shein and Wish were the only ones that offered filtering by clothing article type (ex: tops). Considering these 
+            sites are often used in search of affordable clothing alternatives, I was surprised to see only Shein had a price filtering feature. 
+            In terms of aggregator features, Shein was the only website that offered “1 Click Buy” features, but it was only for certain products.
+            This feature seemed a bit unnecessary since most users purchase more than one item at a time, it did not fully align with the user's mental
+            process.  
+        </p>
+
+        <p>
+            Unlike the other two sides, Wish did not offer a Quick add feature for the cart nor did it include a cart pop up, in order to add an item 
+            to the cart a user must click on the item link and add it in a new window. This felt like very weak decision to me as it seemed to disrupt
+            the heirarchy of the site forcing users to switch between the cart and item list pages as they shop. All three carts did, however, include a quantity increment feature 
+            for each item to change the number of each item being purchased/remove them from the cart. Overall, I felt Shein’s design provided features that 
+            complemented the users' intentions on the site, such as the price filter and cart quick add; however, some features felt seamingly
+            felt unnecessary. 
+        </p>
+    </div>
+
+    <div class="part-2">
+        <h1>Design</h1>
+        <p>
+            In the spirit of pushing for more sustainable online retail practices, I chose to focus on creating a second-hand 
+            clothing shopping experience for users called "Eco-Fashion". The site is meant to offer users with retail services for
+            second-hand clothing items. Below I listed some of the major features I chose to incorporate, many of
+            which were inspired by my competitive research analysis. 
+        </p>
+
+        <h2>Sorting/Aggregator Features:</h2>
+
+        <ul>
+            <li><strong>Clothing Article Filtering</strong> - Users can filter list results by clothing type</li>
+            <li><strong>Maximum Price Filtering</strong> - Items can be filtered according to a maximum price slider</li>
+            <li><strong>Price Sorting</strong> - Items list can be sorted by price from cheapest to most expensive</li>
+            <li><strong>Cart Pop-Up</strong> - A user's shopping cart is displayed adjacent to the clothing items as they shop</li>
+            <li><strong>Cart Quick-Add Button</strong> - Users can add an item to their card with the press of a button without having to switch windows/screens</li>
+            <li><strong>Remove Item/Clear Cart Button</strong> - Users can remove a single type of item from a cart or clear their cart completely as they shop</li>
+        </ul>
+
+        <h2>Lofi Mockup</h2>
+
+        <p>
+            Before starting development I decided to create a <a href="https://www.figma.com/file/pVeVTdgRlPiCEHQc4Hphx7/Untitled?type=design&node-id=0%3A1&mode=design&t=840UKlptf3a4Ivub-1">lofi mockup on figma</a> to get a better sense of the structure I wanted
+            for my webpage. I chose to place the clothing items in the center to draw the users' attention to them. Each clothing item
+            card contains its name, its article/categorical type, price, and a cart quick-add button. Just to the side on the left, 
+            users have access to the sorting and filter tools so they can keep track of these settings as they shop. Finally, I placed
+            the shopping cart pop-up on the right as it is likely the final section of the page users will navigate to. 
+        </p>
+        
+        <a href="https://www.figma.com/file/pVeVTdgRlPiCEHQc4Hphx7/Untitled?type=design&node-id=0%3A1&mode=design&t=840UKlptf3a4Ivub-1">
+            <img src="assets/figma-lofi.png"></img>
+        </a>
+        
+    </div>
+
+    <div class="part-3">
+        <h1>Final Product and Deployment</h1>
+        <p>Having collected the necessary data and created a rough design of my <a href="https://development-project-ten.vercel.app/">site</a>, I began the development process. The site was built in ReactJS using CSS for styling and 
+            deployed on Vercel. 
+        </p>
+        
+        <a href="https://development-project-ten.vercel.app/">
+        <img src="assets/final-site.png"></img>
+        </a>
+
+        <h2> Design Choices and Summary</h2>
+
+        <p> In the theme of sustainability, I opted for greens and natural oranges for the color scheme, making sure 
+            to create enough contrast to ensure accessibility. Using adequate font sizes and consistent font styles throughout
+            the webpage, I maintained an organized and navigable hierarchy. 
+        </p>
+
+        <p>
+            I incorporated all of the features mentioned before into the final design. The categorical filtering and price sorting
+            tools are bubbles that turn orange when selected to keep track of filter selections, emulating a check-list of sorts. The 
+            price filtering tool is a slider for optimal precision and intuitiveness for users. 
+        </p>
+
+        <p> 
+            I noticed that although some of the websites I researched had quick-add buttons for clothing items, none of them had 
+            quick-remove buttons. As users shop it is common for them to find alternative items or lose interest in items that already 
+            are included in their carts. So, for items already added to the cart, I decided to add a "Remove" button, so users can choose to 
+            remove them from their cart as needed. I also added an "Empty Cart" button that removes all items from the cart. Similarly,
+            I added a "Reset" button to reset all of the filtering/sorting settings without disrupting the users' cart. 
+        </p>
+
+        <h2>Shortcomings</h2>
+
+        <p>Overall, the webpage contains all of the minimal requirements for basic prototype functionality; however, there 
+            were a couple of features I felt could have been enhanced or added. I think it would have made more sense instead of
+            having a maximum price slider to incorporate a price range slider that handled minimum and maximimum price values. Additionally,
+            for the remove/add from cart feature, I think it would have been more realistic to add a quantity attribute to the cart where
+            users could input the quantity of each item they wanted to purchase. With more time, these features could have been implemented and 
+            enhanced the prototype's quality. 
+        </p>
+
+    </div>
+    
+</body>
+</html>
